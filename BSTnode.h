@@ -18,7 +18,7 @@ class ingre
 class BSTnode : public ingre
 {
     private:
-        entreeList * food;
+        menu_list * food;
         BSTnode * left;
         BSTnode * right;
 
@@ -39,21 +39,16 @@ class BST
 {
     private:
         BSTnode * root;
-        void insert_(BSTnode *& root, entreeList * food,  char * ing);
+        void insert_(BSTnode *& root, menu_list * food,  char * ing);
         void display_(BSTnode * root);
         int hashValue(char * ing);
     
     public:
         BST();
         ~BST();
-<<<<<<< HEAD
-        void insert(entreeList * food, char * ing);
+        void insert(menu_list * food, char * ing);
         void display();
         
-};
-=======
-        int hashVlue(char * ing);
-        void insert(char * ing)
+        void insert(char * ing);
 
-}
->>>>>>> 06eeb304fad5c031d913811b3efba3c15545ff6c
+};

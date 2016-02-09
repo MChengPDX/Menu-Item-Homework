@@ -120,30 +120,9 @@ BST::~BST()
 
 }
 
-int BST::hashValue(char * ing)
-{
-<<<<<<< HEAD
-    int precision = 1;
-    return (*(int*)ing) >> precision; 
 
-}
 
-void BST::insert(entreeList * food, char * ing)
-{
-    insert_(root, food, ing);
-}
 
-void BST::insert_(BSTnode *& root, entreeList * food, char * ing)
-{
-    if(!root)
-    {
-        int hV = hashValue(ing);
-        root = new BSTnode(ing, hV);
-        root->getLeft() = NULL;
-        root->getRight() = NULL;
-    }
-
-}
 
 void BST::display()
 {
@@ -161,33 +140,6 @@ void BST::display_(BSTnode * root)
 
 
 }
-=======
-    int i = (int)strlen(ing);
-    cout << "This is i " << i << endl;
-    int k = 0;
-    for(int j = 0; j < 1; j++)
-    {
-        k += ing[j];
-
-    }
-    return k/5;
-
-}
-
-void BST::insert(char * ing)
-
-{
-    BSTnode * temp = new BSTnode(ing);
-    temp->getLeft() = NULL;
-    temp->getRight() = NULL;
-    if(!root)
-    {
-        root = temp;
-        return ;
-    }
-
-
-}
 
 
 
@@ -199,7 +151,7 @@ void BST::insert(char * ing)
 
 
 
->>>>>>> 06eeb304fad5c031d913811b3efba3c15545ff6c
+
 
 
 

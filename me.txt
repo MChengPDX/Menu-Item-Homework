@@ -1,15 +1,8 @@
-Beef Pho
-Pad Thai
+1
+PHO BEEF
 
-Thai Ice Tea
-Milk Tea
-Beef Pho
-Eggrolls
+2
+BEEF JUICE
 
-Beef Pho
-EggRolls
-BeefChicken Wings
-
-
-
-
+0
+BEEF EGG ROLL

@@ -8,6 +8,11 @@ entree_information::entree_information():menu_item(NULL)
 
 }
 
+entree_information::~entree_information()
+{
+
+}
+
 entree_information::entree_information(const entree_information & from)
 {
     menu_item = new char [(strlen(from.menu_item)+1)];
@@ -170,6 +175,13 @@ entree_information * apps::copy()
 
 }
 
+void apps::display()
+{
+    cout << "Appetizers " << endl;
+    cout << menu_item << endl;
+
+}
+
 //entrees implementation
 
 entrees::entrees()
@@ -196,8 +208,44 @@ entree_information * entrees::copy()
 
 }
 
+void entrees::display()
+{
+    cout << "Entrees " << endl;
+    cout << menu_item << endl;
+
+}
+
+//drinks implementation 
+
 drinks::drinks()
 {
 
 }
 
+drinks::drinks(const drinks & from)
+{
+    menu_item = new char [(strlen(from.menu_item)+1)];
+    strcpy(menu_item, from.menu_item);
+
+
+}
+
+drinks::drinks(char * mi)
+{
+    menu_item = new char [(strlen(mi)+1)];
+    strcpy(menu_item, mi);
+
+}
+
+void drinks::display()
+{
+    cout << "Drinks " << endl;
+    cout << menu_item << endl;
+
+}
+
+entree_information * drinks::copy()
+{
+    return new drinks(*this);
+
+}
