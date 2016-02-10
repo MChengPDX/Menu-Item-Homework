@@ -1,8 +1,6 @@
-1
-PHO BEEF
-
-2
-BEEF JUICE
-
-0
-BEEF EGG ROLL
+b
+beef pho
+a
+beef juice
+c
+beef egg roll

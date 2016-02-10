@@ -72,6 +72,7 @@ void node::set_next(node * temp)
 
 void node::set_menu_item(int type, char * menu_item)
 {
+   
     if(type == 0)
         data = new apps(menu_item);
     else if(type == 1)
