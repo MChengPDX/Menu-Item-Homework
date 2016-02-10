@@ -62,18 +62,20 @@ void ingre::display()
  *
  */
 
-BSTnode::BSTnode():left(NULL),right(NULL)
+BSTnode::BSTnode():left(NULL),right(NULL),food(NULL);
 {
 
 }
 
 BSTnode::BSTnode(const ingre & obj):ingre(obj)
 {
+    food = obj.food;
 
 }
 
-BSTnode::BSTnode(char * in, int h):ingre(in, h)
+BSTnode::BSTnode(char * in, int h, menu_list * food_obj):ingre(in, h)
 {
+    food = food_obj;
 
 }
 
@@ -122,6 +124,15 @@ BST::~BST()
 
 
 
+void BST::insert_(BSTnode *& root, menu_list * food, char * ing, int value)
+{
+    if(!root)
+    {
+        root = new BSTnode(ing, value, food);
+
+    }
+
+}
 
 
 void BST::display()

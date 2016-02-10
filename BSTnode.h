@@ -26,7 +26,7 @@ class BSTnode : public ingre
     public:
         BSTnode();
         BSTnode(const ingre & );
-        BSTnode(char * in, int h);
+        BSTnode(char * in, int h, menu_list * food, int value);
         ~BSTnode();
         BSTnode *& getLeft();
         BSTnode *& getRight();
