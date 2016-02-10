@@ -10,7 +10,7 @@ class entree_information
         entree_information(char * menu_item);
         entree_information(const entree_information & from);
         virtual entree_information * copy() = 0;
-        virtual void display_content();
+        virtual void display();
 };
 
 class node

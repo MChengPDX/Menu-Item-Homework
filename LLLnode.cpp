@@ -27,7 +27,7 @@ entree_information::entree_information(char * menu_)
 
 }
 
-void entree_information::display_content()
+void entree_information::display()
 {
     cout << menu_item << endl;
 
@@ -60,7 +60,7 @@ node*&node::get_next()
 
 void node::display_node()
 {
-    data->display_content();
+    data->display();
 
 }
 
