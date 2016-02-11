@@ -9,10 +9,10 @@ void manager::load_menu()
     menu_object = new menu_list;
     int size = 30;
 
-    char type[size], menu_item[size];
+    char type[size], menu_item[size], ingre[size];
 
    ifstream load;
-    load.open("me.txt");
+   load.open("me.txt");
     if(load)
     {
         while(!load.eof())
@@ -32,7 +32,22 @@ void manager::load_menu()
         
     }
     load.close();
-    menu_object->display_all();
+    
+    load.open("in.txt");
+    if(load)
+    {
+        while(!load.eof())
+        {
+            load.get(ingre, size, '\n');
+            load.ignore(size+1, '\n');
+            load.ignore(size+1, '\n');
+            int compare = balance_tree.hash_value(ingre);
+            balance_tree.insert(ingre, compare, menu_object);
+            balance_tree.display_all();
+            return;
+        }
+    }
+    load.close();
     return;
 
 }

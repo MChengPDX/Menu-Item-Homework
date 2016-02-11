@@ -7,5 +7,4 @@ int main()
 {
     manager handle;
     handle.load_menu();
-    
 }
