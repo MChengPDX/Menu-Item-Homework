@@ -21,18 +21,22 @@ void manager::load_menu()
             load.ignore(size+1, '\n');
             load.get(menu_item, size, '\n');
             load.ignore(size+1, '\n');
+
             if(*type == 'a')
                 menu_object->insert(0, menu_item);
-            if(*type == 'b')
+            else if(*type == 'b')
                 menu_object->insert(1, menu_item);
-            if(*type == 'c')
+            else
                 menu_object->insert(2, menu_item);
-
+         
+            
         }
-        
+        test_tree(menu_object);
     }
     load.close();
     
+    
+    /*
     load.open("in.txt");
     if(load)
     {
@@ -43,12 +47,35 @@ void manager::load_menu()
             load.ignore(size+1, '\n');
             int compare = balance_tree.hash_value(ingre);
             balance_tree.insert(ingre, compare, menu_object);
-            balance_tree.display_all();
-            return;
         }
+        
     }
     load.close();
     return;
-
+*/
+}
+void manager::test_tree(menu_list * menu_object)
+{
+    int size = 100;
+    int z = 0;
+    char ing[size];
+    cout << "Display from test_tree" << endl;
+    menu_object->display_all();
+    ifstream load;
+    load.open("in.txt");
+    if(load)
+    {
+        while(!load.eof())
+        {
+            load.get(ing, size, '\n');
+            load.ignore(size, '\n');
+            load.ignore(size, '\n');
+            z = balance_tree.hash_value(ing);
+            cout << "This is hash_value" << z <<  endl;
+            balance_tree.insert(ing, z, menu_object);            
+        }
+    }
+    balance_tree.display_all();
+    
 }
 

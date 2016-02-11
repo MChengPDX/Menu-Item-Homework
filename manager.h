@@ -7,6 +7,6 @@ class manager
         BST balance_tree;
     public:
         void load_menu();
-        void test_tree();
+        void test_tree(menu_list * menu_object);
 
 };
