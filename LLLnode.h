@@ -1,4 +1,20 @@
+/*
+ * Michael Cheng
+ * CS 202 Homework 2
+ * Winter 2106
+ *
+ * LLLnode.h
+ *
+ * Holds class templates and prototypes for LLLnode.cpp
+ * This will be a list of different object types, determine
+ * at run time through dynamic binding
+ */
 
+
+//class entree information
+//an abstract base class wth dynamic memory to hold
+//menu item information
+//Also ha a virutal pure fuction of copy, which returns a type of entree_information
 class entree_information
 {
     protected:
@@ -11,8 +27,12 @@ class entree_information
         entree_information(const entree_information & from);
         virtual entree_information * copy() = 0;
         virtual void display();
+        char * get_menu();
 };
 
+
+//class node
+//has an pointer object to entree_information
 class node
 {
     protected:
@@ -26,9 +46,13 @@ class node
         void set_next(node * head);
         void display_node();
         void set_menu_item(int type, char * in);
+        char * get_info();
 
 };
 
+
+//class menu_list
+//base class for each menu type to be dervied from
 class menu_list
 {
     protected:
@@ -40,9 +64,14 @@ class menu_list
         void insert(int type, char * ing);
         void remove_all();
         void display_all();
+        void remove_one(char * ing);
+        void search_one(char * ing);
 
 };
 
+
+//class apps
+//derveid from menu list
 class apps : public entree_information
 {
     public:
@@ -54,6 +83,8 @@ class apps : public entree_information
 
 };
 
+
+//class entrees dervied from menu list
 class entrees : public entree_information
 {
     public:
@@ -65,6 +96,8 @@ class entrees : public entree_information
 
 };
 
+
+//class drinks dervied from menu list
 class drinks : public entree_information
 {
     public:

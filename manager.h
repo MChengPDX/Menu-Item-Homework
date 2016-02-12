@@ -8,5 +8,6 @@ class manager
     public:
         void load_menu();
         void test_tree(menu_list * menu_object);
+        void test_lll(menu_list * menu_object);
 
 };
