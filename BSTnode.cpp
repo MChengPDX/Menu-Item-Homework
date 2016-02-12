@@ -26,6 +26,14 @@ in::in():ingredidents(NULL),compare_value(0)
 }
 
 
+//Destructors
+in::~in()
+{
+    delete [] ingredidents;
+    compare_value = 0;
+
+}
+
 //assignment constructor
 //assigning values to varibles within the class
 in::in(char * ing, int cv)

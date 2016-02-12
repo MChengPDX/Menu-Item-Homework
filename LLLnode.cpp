@@ -31,7 +31,7 @@ entree_information::entree_information():menu_item(NULL)
 //destructor to deallocate dynamic memory
 entree_information::~entree_information()
 {
-    delete menu_item;
+    delete [] menu_item;
     menu_item = NULL;
 
 }
@@ -155,7 +155,7 @@ menu_list::menu_list():head(NULL)
 //destructor class remove_all to deallcoate memory
 menu_list::~menu_list()
 {
-    remove_all();
+   remove_all();
 }
 
 

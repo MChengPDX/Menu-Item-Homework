@@ -28,6 +28,7 @@ class in
         in();
         in(char * ing, int cv);
         in(const in &);
+        ~in();
         bool compare(int value);
         char * get_ingredidents();
         void display();
